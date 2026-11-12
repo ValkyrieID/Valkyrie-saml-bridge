@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/ValkyrieSamlBridge.Core/ValkyrieSamlBridge.Core.csproj" />
+    <Project Path="src/ValkyrieSamlBridge.Data/ValkyrieSamlBridge.Data.csproj" />
+    <Project Path="src/ValkyrieSamlBridge.Web/ValkyrieSamlBridge.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/ValkyrieSamlBridge.Core.Tests/ValkyrieSamlBridge.Core.Tests.csproj" />
+    <Project Path="tests/ValkyrieSamlBridge.Integration.Tests/ValkyrieSamlBridge.Integration.Tests.csproj" />
+  </Folder>
+</Solution>

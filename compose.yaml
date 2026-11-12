@@ -1,0 +1,31 @@
+services:
+  saml-bridge:
+    build: .
+    image: valkyrie-saml-bridge:local
+    restart: unless-stopped
+    volumes:
+      - saml-bridge-data:/data
+    env_file:
+      - .env
+    environment:
+      SAMLBRIDGE_DATABASE: /data/saml-bridge.db
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - saml-bridge
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      SAMLBRIDGE_HOST: ${SAMLBRIDGE_HOST:?set SAMLBRIDGE_HOST in .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  saml-bridge-data:
+  caddy-data:
+  caddy-config:

@@ -1,0 +1,4 @@
+# Public origin of the bridge, for example sso.example.test. Caddy gets a certificate for it.
+{$SAMLBRIDGE_HOST} {
+	reverse_proxy saml-bridge:8080
+}

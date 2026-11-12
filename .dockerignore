@@ -1,0 +1,14 @@
+**/bin
+**/obj
+**/.vs
+**/*.user
+**/*.db
+**/*.db-wal
+**/*.db-shm
+**/node_modules
+**/launchSettings.json
+tests
+docs
+.git
+.gitignore
+*.md

@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ValkyrieSamlBridge.Core\ValkyrieSamlBridge.Core.csproj" />
+    <ProjectReference Include="..\ValkyrieSamlBridge.Data\ValkyrieSamlBridge.Data.csproj" />
+  </ItemGroup>
+</Project>
